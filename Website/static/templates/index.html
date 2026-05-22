@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<link href="{{url_for('static',filename='css/main.css')}}" rel = "stylesheet" type="text/css">
+	<link href="{{url_for('static',filename='css/normalize.css')}}" rel = "stylesheet" type="text/css">
+    <!--link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+	<title>Image Upload App</title>
+</head>
+<body> <div class="banner">
+	<div class="nav">
+		<input type="checkbox"id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<label class="logo">Deepfake Detection</label >
+		  <ul>
+			<li><a  href="/Detect">Home</a></li>
+			<li><a class="active" href="/login" >Login </a></li>
+			<li><a href="/signup" >Sign-up </a></li>
+			<li><a href="https://www.linkedin.com/in/vignesh-kumar-raja-86b581211/">LinkedIn</a></li>
+		  </ul>
+	  </div></div>
+	<div class="content">
+		
+	<h1>Welcome to the Deepfake Detection App!</h1>
+	<div class="bn">
+		<form class="form" action="/login">
+		  <div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10 btn1">
+				<button class="button"  ><span class="span"></span>Login</button>
+			</div>
+		</form>
+			</div>
+	</div>
+		<br>
+		<br>
+  
+		<div class="bn">
+			<form class="form" action="/signup">
+			  <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10 btn1">
+					<button class="button"  ><span class="span"></span>Signup</button> 
+				</div>
+			</form>
+				</div>
+		</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/LS.css') }}">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+	<title>Log in</title>
+</head>
+<body >
+	<div class="banner">
+	<div class="nav">
+		<input type="checkbox"id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<label class="logo">Deepfake Detection</label >
+		  <ul>
+			<li><a  href="/Detect">Home</a></li>
+			<li><a class="active" href="/login" >Login </a></li>
+			<li><a href="/signup" >Sign-up </a></li>
+			<li><a href="https://www.linkedin.com/in/vignesh-kumar-raja-86b581211/">LinkedIn</a></li>
+		  </ul>
+	  </div>
+	</div>
+	<!--<div class="content">
+		<h1>Login</h1>
+		{% if error %}
+		<p>{{ error }}</p>
+	{% endif %}
+			<div class="bn">
+				<form class="form" method="post" action="/Detect">
+				  <div class="form-group">
+					<p class="text">
+						<label for="username">Username:</label>
+						<input type="text" id="username" name="username">
+					</p>
+					<p class = "text">
+						<label for="password">Password:</label>
+						<input type="password" id="password" name="password">
+					</p>
+					<div class="col-sm-offset-2 col-sm-10 btn1">
+						<button class="btn"  type="submit" ><span class="span"></span>Login</button> 
+					</div>
+				</form>
+					</div>
+		</div>-->
+		<div class="container">
+			<div class="login_box">
+				<h1>Login</h1>
+				<div class="input_box">
+					<input type="text" required="">
+					<label for="">Email</label>
+					<ion-icon class="icon " name="mail-outline"></ion-icon>
+				</div>
+				<div class="input_box">
+					<input type="password" required="">
+					<label for="">password</label>
+					<ion-icon class="icon" name="lock-closed-outline"></ion-icon>
+				</div>
+				<div class="login">
+					<form action="/Detect">
+					<button type="submit">Log in </button>
+				</form>
+				</div>
+				<div>
+					<div class="reg">
+						<p>don't have a account </p>
+						<a href="/signup">registration</a>
+					</div>
+				</div>
+			</div>
+		 </div>
+		
+
+	
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>upload video</title>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="C:\Users\pc\Desktop\local Api\static\css\main.css">
+    <link rel="stylesheet" href="C:\Users\pc\Desktop\local Api\static\css\normalize.css"> -->
+    <link href="{{url_for('static',filename='css/main.css')}}" rel = "stylesheet">
+    <link href="{{url_for('static',filename='css/normalize.css')}}" rel = "stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/5b5f01cade.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <div class="banner1">
+
+    <div class="nav"  id = "uv">
+      <input type="checkbox"id="check">
+      <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Deepfake Detection</label >
+        <ul>
+          <li><a  href="/">Home</a></li>
+          <li><a href="/login" >Login </a></li>
+          <li><a href="/signup" >Sign-up </a></li>
+          <li><a href="https://www.linkedin.com/in/vignesh-kumar-raja-86b581211/">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="hoba">
+
+      <div class="file__upload" >
+        <form class="body" method="post" action="/predict_video" enctype="multipart/form-data"  id="xx"  >
+          
+            
+          			<p class="file-upload-wrapper" data-text="Select your file to Upload!">
+                  <input class="file-upload-field" id="upload" type="file" name="file" autocomplete="off"  onchange="vvupload()" required  accept=".mp4"></p>
+                <label for="upload" class="label">
+                  	<i class="fa fa-file-text-o fa-3x"></i>
+                    <p class="label">
+                        <strong>drop your files here  </strong><br>or<span> browse</span>  to begin the upload
+                    </p> 
+                </label>
+                <br>
+                <input type="file" accept="video/*" onchange="previewVideo(this)">
+                
+                <div id="upload-filename" style="color: aliceblue;"></div>
+
+
+                <!--<video src= video_path  id = "uploadvideo" controls = "controls"></video>-->
+
+            <p >
+        		    <input class="button" type="submit" value="Predict">
+        	 </p>
+        </form>
+    </div>
+    </div>
+  </div>
+   <!-- <script src="C:\Users\pc\Desktop\local Api\static\js\jquery-1.12.4.min.js"></script>
+   <script src="C:\Users\pc\Desktop\local Api\static\js\main.js"></script> -->
+    <script src="{{url_for('static',filename='js/jquery-1.12.4.min.js')}}"></script>
+   <script src="{{url_for('static',filename='js/main.js')}}"></script>
+
+
+  </body>
+</html>
+<script>
+  var input = document.getElementById( 'upload' );
+var infoArea = document.getElementById( 'upload-filename' );
+
+input.addEventListener( 'change', showFileName );
+
+function showFileName( event ) {
+  
+  // the change event gives us the input it occurred in 
+  var input = event.srcElement;
+  
+  // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
+  var fileName = input.files[0].name;
+  
+  // use fileName however fits your app best, i.e. add it into a div
+  infoArea.textContent = 'File name: ' + fileName;
+}
+  
+  </script>

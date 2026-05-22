@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Upload Image</title>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="C:\Users\pc\Desktop\local Api\static\css\main.css">
+    <link rel="stylesheet" href="C:\Users\pc\Desktop\local Api\static\css\normalize.css"> -->
+    <link href="{{url_for('static',filename='css/main.css')}}" rel = "stylesheet">
+    <link href="{{url_for('static',filename='css/normalize.css')}}" rel = "stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/5b5f01cade.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+  <div class="banner1">
+    <div class="nav">
+      <input type="checkbox"id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Deepfake Detection</label >
+        <ul>
+        <li><a  href="/Detect">Home</a></li>
+        <li><a  href="/login" >Login </a></li>
+        <li><a href="/signup" >Sign-up </a></li>
+        <li><a href="https://www.linkedin.com/in/vignesh-kumar-raja-86b581211/">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="hoba">
+
+      <div class="file__upload">
+        <form class="body" method="post" action="/Predict_image" enctype="multipart/form-data">
+          			<p class="file-upload-wrapper" data-text="Select your file!">
+                  <input class="file-upload-field" id="upload" type="file" name="file" autocomplete="off" required  accept=".png, .jpg, .jpeg" ></p>
+                <label class="label" for="upload">
+                  	<i class="fa fa-file-text-o fa-3x"></i>
+                     <p style="color: aliceblue;">
+                      <br>
+                        <strong>Drag and drop  </strong>files here<br>or<span> browse</span>  to begin the upload
+                    </p> 
+                </label>
+                <br>
+                <div id="vv" >  </div>
+            <p>
+        		    <input class="button" style="font-size: larger;" type="submit" value="Predict">
+        	  </p>
+            <div id="upload-filename" style="color: aliceblue;"></div>
+        </form>
+
+    </div>
+    </div>
+  </div>
+
+
+   <!-- <script src="C:\Users\pc\Desktop\local Api\static\js\jquery-1.12.4.min.js"></script>
+   <script src="C:\Users\pc\Desktop\local Api\static\js\main.js"></script> -->
+
+    <script src="{{url_for('static',filename='js/jquery-1.12.4.min.js')}}"></script>
+   <script src="{{url_for('static',filename='js/main.js')}}"></script>
+
+
+  </body>
+</html>

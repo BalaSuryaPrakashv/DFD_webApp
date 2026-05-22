@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/LS.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+	<title>Sign up</title>
+</head>
+<body >
+	<div class="banner">
+	<div class="nav">
+		<input type="checkbox"id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<label class="logo">Deepfake Detection</label >
+		  <ul>
+			<li><a  href="/Detect">Home</a></li>
+			<li><a  href="/login" >Login </a></li>
+			<li><a class="active" href="/signup" >Sign-up </a></li>
+			<li><a href="https://www.linkedin.com/in/vignesh-kumar-raja-86b581211/">LinkedIn</a></li>
+		  </ul>
+	  </div>
+	</div>
+	  <div class="container">
+		<div class="login_box">
+			<h1>Sign-up</h1>
+			<div class="input_box">
+				<input type="text" required="">
+				<label for="">Email</label>
+				<ion-icon class="icon " name="mail-outline"></ion-icon>
+			</div>
+			<div class="input_box">
+				<input type="password" required="">
+				<label for="">password</label>
+				<ion-icon class="icon" name="lock-closed-outline"></ion-icon>
+			</div>
+			<div class="login">
+				<form action="/Detect">
+				<button type="submit">Sign up</button>
+			</form>
+			</div>
+			<div>
+				<div class="reg">
+					<p>Already have an account? </p>
+					<a href="/login">Login</a>
+				</div>
+			</div>
+		</div>
+	 </div>
+
+	
+</body>
+</html>
+</html>
